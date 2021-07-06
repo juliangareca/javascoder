@@ -57,111 +57,134 @@
 /* clase 4 */
 
 
-let numero1 = parseInt(prompt("ingrese precio del producto"));
-let IVA = 1.21;
-let operacion = prompt("ingrese * para calcular con IVA o / para calcular SIN IVA");
-function calculo(numero1, IVA, operacion){
-    switch(operacion){
-        case "*":
-            return numero1 * IVA;
-            break
-        case "/":
-            return numero1 / IVA;
-            break
+// let numero1 = parseInt(prompt("ingrese precio del producto"));
+// let IVA = 1.21;
+// let operacion = prompt("ingrese * para calcular con IVA o / para calcular SIN IVA");
+// function calculo(numero1, IVA, operacion){
+//     switch(operacion){
+//         case "*":
+//             return numero1 * IVA;
+//             break
+//         case "/":
+//             return numero1 / IVA;
+//             break
+//     }
+// }
+
+// alert("¡Bienvenidos a su nueva CALCULADORA DE CUOTAS!")
+// const funcionPrincipal = () => {
+//     let cuotas  = prompt(" Ingrese la cantidad de cuotas a seleccionar, pueden ser 1, 2, 3, 6 o hasta 12")
+    
+//     switch (cuotas) {
+//         case "1":
+//             alert( "En 1 cuota no tiene interes!");
+//             let confirmacion = prompt ("¿Estas seguro de las cuotas ingresadas?")
+
+//             switch(confirmacion){
+//                 case "si":
+//                     alert("Buenisimo! El valor queda en " + calculo(numero1, IVA, operacion));
+                
+//                 break;
+
+//                 default:
+//                     alert("Volver a ingresar cuotas deseadas");
+//             }
+
+//             break;
+//         case "2":
+//             alert ( "En 2 cuotas tiene un 5% de recargo");
+//             let confirmacion2 = prompt ("¿Estas seguro de las cuotas ingresadas?")
+
+//             switch(confirmacion2){
+//                 case "si":
+//                     alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.05));
+                
+//                 break;
+
+//                 default:
+//                     alert("Volver a ingresar cuotas deseadas");
+//             }
+
+
+//             break;
+//         case "3":
+//             alert ( "En 3 cuotas tiene un recargo de 10%");
+//             let confirmacion3 = prompt ("¿Estas seguro de las cuotas ingresadas?")
+
+//             switch(confirmacion3){
+//                 case "si":
+//                     alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.10));
+                
+//                 break;
+
+//                 default:
+//                     alert("Volver a ingresar cuotas deseadas");
+//             }
+
+
+//             break;
+//         case "6":
+//             alert ( " En 6 cuotas tiene un recargo de 25%");
+//             let confirmacion4 = prompt ("¿Estas seguro de las cuotas ingresadas?")
+
+//             switch(confirmacion4){
+//                 case "si":
+//                     alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.25));
+                
+//                 break;
+
+//                 default:
+//                     alert("Volver a ingresar cuotas deseadas");
+//             }
+
+
+//             break;
+//         case "12":
+//             alert ( " En 12 cuotas tiene un recargo de 60%");
+//             let confirmacion5 = prompt ("¿Estas seguro de las cuotas ingresadas?")
+
+//             switch(confirmacion5){
+//                 case "si":
+//                     alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.60));
+                
+//                 break;
+
+//                 default:
+//                     alert("Volver a ingresar cuotas deseadas");
+//             }
+
+
+//             break;
+//         default:
+//             alert("La opcion ingresada no es correcta, vuelva a elegir la cantidad de cuotas deseadas, en efectivo tiene un 10% de descuento =)")
+
+//             break;
+//     }
+// };
+
+// funcionPrincipal ();
+
+// clase 5
+
+class autos{
+    constructor(marca, modelo, año, puertas, estado, transmision, combustible){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+        this.puertas = puertas;
+        this.estado = estado;
+        this.transmision = transmision;
+        this.combustible = combustible;
+    }
+    cotizador (){
+        console.log("El auto ingresado es un " + (this.marca) + " " + (this.modelo) + " Modelo " + (this.año) + ", poosee " + (this.puertas) + " con transmision " + 
+        (this.transmision) + ", el mismo se encuentra en estado " + (this.estado) + ". " + (this.combustible));
     }
 }
 
-alert("¡Bienvenidos a su nueva CALCULADORA DE CUOTAS!")
-const funcionPrincipal = () => {
-    let cuotas  = prompt(" Ingrese la cantidad de cuotas a seleccionar, pueden ser 1, 2, 3, 6 o hasta 12")
-    
-    switch (cuotas) {
-        case "1":
-            alert( "En 1 cuota no tiene interes!");
-            let confirmacion = prompt ("¿Estas seguro de las cuotas ingresadas?")
-
-            switch(confirmacion){
-                case "si":
-                    alert("Buenisimo! El valor queda en " + calculo(numero1, IVA, operacion));
-                
-                break;
-
-                default:
-                    alert("Volver a ingresar cuotas deseadas");
-            }
-
-            break;
-        case "2":
-            alert ( "En 2 cuotas tiene un 5% de recargo");
-            let confirmacion2 = prompt ("¿Estas seguro de las cuotas ingresadas?")
-
-            switch(confirmacion2){
-                case "si":
-                    alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.05));
-                
-                break;
-
-                default:
-                    alert("Volver a ingresar cuotas deseadas");
-            }
-
-
-            break;
-        case "3":
-            alert ( "En 3 cuotas tiene un recargo de 10%");
-            let confirmacion3 = prompt ("¿Estas seguro de las cuotas ingresadas?")
-
-            switch(confirmacion3){
-                case "si":
-                    alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.10));
-                
-                break;
-
-                default:
-                    alert("Volver a ingresar cuotas deseadas");
-            }
-
-
-            break;
-        case "6":
-            alert ( " En 6 cuotas tiene un recargo de 25%");
-            let confirmacion4 = prompt ("¿Estas seguro de las cuotas ingresadas?")
-
-            switch(confirmacion4){
-                case "si":
-                    alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.25));
-                
-                break;
-
-                default:
-                    alert("Volver a ingresar cuotas deseadas");
-            }
-
-
-            break;
-        case "12":
-            alert ( " En 12 cuotas tiene un recargo de 60%");
-            let confirmacion5 = prompt ("¿Estas seguro de las cuotas ingresadas?")
-
-            switch(confirmacion5){
-                case "si":
-                    alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.60));
-                
-                break;
-
-                default:
-                    alert("Volver a ingresar cuotas deseadas");
-            }
-
-
-            break;
-        default:
-            alert("La opcion ingresada no es correcta, vuelva a elegir la cantidad de cuotas deseadas, en efectivo tiene un 10% de descuento =)")
-
-            break;
-    }
-};
-
-funcionPrincipal ();
+    let auto1 = new autos("Peugeot", "505", 1993 , 5, "inmaculado", "manual", "NAFTA/GNC");
+    auto1.cotizador()
+    let auto2 = new autos("Wolkswagen", "GOL", 2001, 3, "detalles de pintura", "manual", "DIESEL");
+    auto2.cotizador()
 
 
