@@ -177,14 +177,25 @@ class autos{
         this.combustible = combustible;
     }
     cotizador (){
-        console.log("El auto ingresado es un " + (this.marca) + " " + (this.modelo) + " Modelo " + (this.año) + ", poosee " + (this.puertas) + " con transmision " + 
-        (this.transmision) + ", el mismo se encuentra en estado " + (this.estado) + ". " + (this.combustible));
+        return`El auto ingresado es un ${this.marca} ${this.modelo} Modelo ${this.año}, posee ${this.puertas} y con tansmision ${this.transmision}, el mismo se conserva en un estado ${this.estado}. ${this.combustible}`;
     }
 }
 
     let auto1 = new autos("Peugeot", "505", 1993 , 5, "inmaculado", "manual", "NAFTA/GNC");
     auto1.cotizador()
-    let auto2 = new autos("Wolkswagen", "GOL", 2001, 3, "detalles de pintura", "manual", "DIESEL");
-    auto2.cotizador()
+    // const marca = prompt("Ingrese Marca del vehiculo");
+    // const modelo = prompt("Ingrese Modelo del vehiculo");
+    // const año = parseInt(prompt("Ingrese año del vehiculo"));
+    // const puertas = parseInt(prompt("Ingrese cantidad de puertas del vehiculo"));
+    // const estado = prompt("Ingrese estado del vehiculo");
+    // const transmision = prompt("Ingrese transmision del vehiculo");
+    // const combustible = prompt("Ingrese tipo de combustible del vehiculo");
+    const fundido = ["Fundido"];
 
-
+    // const auto2 = new autos(marca, modelo, año, puertas, estado, transmision, combustible);
+    const datosIngresados = [auto1]
+    
+    console.log(auto1.cotizador ());
+    // console.log(auto2.cotizador ());
+    console.log(fundido);
+    console.log(datosIngresados.length);
