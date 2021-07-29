@@ -218,8 +218,8 @@ function submit() {
   document.body.appendChild(div);
 }
 
-document.getElementById("enviar").addEventListener("click", function(event){
-    event.preventDefault();
+document.getElementById("enviar").addEventListener("click", function(e){
+    e.preventDefault();
     myFunction();
 
   });
