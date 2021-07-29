@@ -9,6 +9,22 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-
 }
 
+.container {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  text-align-last: center;
+}
+
+.padding {
+  margin-bottom: 1rem;
+
+}

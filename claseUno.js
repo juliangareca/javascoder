@@ -7,7 +7,6 @@
 
 //  console.log(concatenacion);
 
-
 // const numeroTelefono = parseInt(prompt("ingrese su número de telefono"));
 // alert("Usted ha ingresado: " + numeroTelefono);
 // const compania = prompt("ingrese su compañia de teléfono");
@@ -39,7 +38,7 @@
 //         alert ("Fua, ni messi se animo a tanto");
 //     }
 
-/* clase 3 */ 
+/* clase 3 */
 
 // let ingresarNumero = Number(prompt ("Ingresar numero"))
 
@@ -55,7 +54,6 @@
 // }
 
 /* clase 4 */
-
 
 // let numero1 = parseInt(prompt("ingrese precio del producto"));
 // let IVA = 1.21;
@@ -74,7 +72,7 @@
 // alert("¡Bienvenidos a su nueva CALCULADORA DE CUOTAS!")
 // const funcionPrincipal = () => {
 //     let cuotas  = prompt(" Ingrese la cantidad de cuotas a seleccionar, pueden ser 1, 2, 3, 6 o hasta 12")
-    
+
 //     switch (cuotas) {
 //         case "1":
 //             alert( "En 1 cuota no tiene interes!");
@@ -83,7 +81,7 @@
 //             switch(confirmacion){
 //                 case "si":
 //                     alert("Buenisimo! El valor queda en " + calculo(numero1, IVA, operacion));
-                
+
 //                 break;
 
 //                 default:
@@ -98,13 +96,12 @@
 //             switch(confirmacion2){
 //                 case "si":
 //                     alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.05));
-                
+
 //                 break;
 
 //                 default:
 //                     alert("Volver a ingresar cuotas deseadas");
 //             }
-
 
 //             break;
 //         case "3":
@@ -114,13 +111,12 @@
 //             switch(confirmacion3){
 //                 case "si":
 //                     alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.10));
-                
+
 //                 break;
 
 //                 default:
 //                     alert("Volver a ingresar cuotas deseadas");
 //             }
-
 
 //             break;
 //         case "6":
@@ -130,13 +126,12 @@
 //             switch(confirmacion4){
 //                 case "si":
 //                     alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.25));
-                
+
 //                 break;
 
 //                 default:
 //                     alert("Volver a ingresar cuotas deseadas");
 //             }
-
 
 //             break;
 //         case "12":
@@ -146,13 +141,12 @@
 //             switch(confirmacion5){
 //                 case "si":
 //                     alert("Buenisimo! El valor queda en " + (calculo(numero1, IVA, operacion) * 1.60));
-                
+
 //                 break;
 
 //                 default:
 //                     alert("Volver a ingresar cuotas deseadas");
 //             }
-
 
 //             break;
 //         default:
@@ -202,7 +196,7 @@
 
 //     const auto2 = new autos(marca, modelo, año, puertas, estado, transmision, combustible);
 //     const datosIngresados = [auto1, auto2]
-    
+
 //     console.log(auto1.cotizador ());
 //     console.log(auto2.cotizador ());
 //     console.log(fundido);
@@ -211,14 +205,26 @@
 //     const ordenObjetos = datosIngresados.sort();
 //     console.log(ordenObjetos);
 
-let h1 = document.createElement("h1");
-h1.textContent = "Clase numero 8";
-document.body.appendChild(h1);
+function submit() {
+  let h1 = document.createElement("h1");
+  h1.textContent = "Clase numero 9";
+  document.body.appendChild(h1);
 
-let div = document.createElement("div");
-let p = document.createElement("p")
-p.textContent = "El alumno en cuestion es " + prompt("Ingresar Nombre y Apellido del Alumno");
-div.appendChild(p)
-document.body.appendChild(div);
+  let div = document.createElement("div");
+  let p = document.createElement("p");
+  p.textContent =
+    "El alumno en cuestion es Julian Gareca";
+  div.appendChild(p);
+  document.body.appendChild(div);
+}
 
+document.getElementById("enviar").addEventListener("click", function(event){
+    event.preventDefault();
+    myFunction();
 
+  });
+
+function myFunction() {
+    
+  document.getElementById("enviar").innerHTML = submit();
+}
