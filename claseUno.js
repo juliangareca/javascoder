@@ -160,73 +160,72 @@
 
 // // clase 5
 
-// class autos{
-//     constructor(marca, modelo, año, puertas, estado, transmision, combustible){
-//         this.marca = marca;
-//         this.modelo = modelo;
-//         this.año = año;
-//         this.puertas = puertas;
-//         this.estado = estado;
-//         this.transmision = transmision;
-//         this.combustible = combustible;
-//     }
-//     cotizador (){
-//         return`El auto ingresado es un ${this.marca} ${this.modelo} Modelo ${this.año}, posee ${this.puertas} y con tansmision ${this.transmision}, el mismo se conserva en un estado ${this.estado}. ${this.combustible}`;
-//     }
-// }
-
-//     const auto1 = new autos("Peugeot", "505", 1993 , 5, "inmaculado", "manual", "NAFTA/GNC");
-//     auto1.cotizador()
-//     // const marca = prompt("Ingrese Marca del vehiculo");
-//     // const modelo = prompt("Ingrese Modelo del vehiculo");
-//     // const año = parseInt(prompt("Ingrese año del vehiculo"));
-//     // const puertas = parseInt(prompt("Ingrese cantidad de puertas del vehiculo"));
-//     // const estado = prompt("Ingrese estado del vehiculo");
-//     // const transmision = prompt("Ingrese transmision del vehiculo");
-//     // const combustible = prompt("Ingrese tipo de combustible del vehiculo");
-//     const marca = "Wolswagen";
-//     const modelo = "Gol";
-//     const año = 2001;
-//     const puertas = 3   ;
-//     const estado = "detalles de pintura";
-//     const transmision = "manual";
-//     const combustible = "Diesel";
-
-//     const fundido = ["Fundido"];
-
-//     const auto2 = new autos(marca, modelo, año, puertas, estado, transmision, combustible);
-//     const datosIngresados = [auto1, auto2]
-
-//     console.log(auto1.cotizador ());
-//     console.log(auto2.cotizador ());
-//     console.log(fundido);
-//     console.log(datosIngresados.length);
-
-//     const ordenObjetos = datosIngresados.sort();
-//     console.log(ordenObjetos);
-
-function submit() {
-  let h1 = document.createElement("h1");
-  h1.textContent = "Clase numero 9";
-  document.body.appendChild(h1);
-
-  let div = document.createElement("div");
-  let p = document.createElement("p");
-  p.textContent =
-    "El alumno en cuestion es Julian Gareca";
-  div.appendChild(p);
-  document.body.appendChild(div);
+class autos {
+    constructor(marca, modelo, año, puertas, estado, transmision, combustible) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
+        this.puertas = puertas;
+        this.estado = estado;
+        this.transmision = transmision;
+        this.combustible = combustible;
+    }
+    cotizador() {
+        return `El auto ingresado es un ${this.marca} ${this.modelo} Modelo ${this.año}, posee ${this.puertas} y con tansmision ${this.transmision}, el mismo se conserva en un estado ${this.estado}. ${this.combustible}`;
+    }
 }
 
-document.getElementById("enviar").addEventListener("click", function(e){
+const marca = "Wolswagen";
+const modelo = "Gol";
+const año = 2001;
+const puertas = 3;
+const estado = "detalles de pintura";
+const transmision = "manual";
+const combustible = "Diesel";
+
+const auto1 = new autos("Peugeot", "505", 1993, 5, "inmaculado", "manual", "NAFTA/GNC");
+const auto2 = new autos(marca, modelo, año, puertas, estado, transmision, combustible);
+const datosIngresados = [auto1, auto2]
+
+console.log(datosIngresados);
+
+
+
+let h1 = document.createElement("h1");
+h1.textContent = "Clase numero 9";
+document.body.appendChild(h1);
+
+let div = document.createElement("div");
+document.body.appendChild(div);
+div.setAttribute("id","ulListado" );
+
+let arrayAutos = datosIngresados.map(function(bar){
+  return '<ul><li>'+bar.marca+' '+bar.modelo+' '+bar.año+' '+bar.puertas+' '+bar.estado+' '+bar.transmision+' '+bar.combustible+'</li></ul>'
+})
+document.getElementById("ulListado").innerHTML = arrayAutos;
+
+function submit() {
+    let h1 = document.createElement("h1");
+    h1.textContent = "Clase numero 9";
+    document.body.appendChild(h1);
+
+    let div = document.createElement("div");
+    let p = document.createElement("p");
+    p.textContent =
+        "El alumno en cuestion es Julian Gareca";
+    div.appendChild(p);
+    document.body.appendChild(div);
+}
+
+document.getElementById("enviar").addEventListener("click", function (e) {
     e.preventDefault();
     myFunction();
 
-  });
+});
 
 function myFunction() {
-    
-  document.getElementById("enviar").innerHTML = submit();
+
+    document.getElementById("enviar").innerHTML = submit();
 }
 
-alert(`Hacer Click en Enviar!`)
+
