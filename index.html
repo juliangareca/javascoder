@@ -10,42 +10,49 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="Css/style.css">
-    <title>Primer entrega proyecto Final</title>
+    <title>Cuevanna del Sur</title>
 </head>
 
 <body class="body">
 
-    <nav class="navbar navbar-light bg-dark">
+    <nav class="navbar navbar-light bg-dark marginNav">
         <div class="container">
-            <div class="navbar-brand text-light"> Formulario</div>
+            <div class="navbar-brand text-light"> CUEVANNA DEL SUR </div>
         </div>
     </nav>
+    <div>
+        <div class="  card  navbar navbar-light bg-danger col-sm-12 infoMain border border-3 border-dark"
+            style="width: 18rem; margin: auto;">
+            <div class="card-body">
+                <form class="row g-3">
+                    <div class="col-md-12 textAlign">
+                        <label for="validationDefault01" class="form-label">Ingresa Peli o Serie Pendiente</label>
+                        <input type="text" class="form-control padding textAlign border-dark" id="nombre"
+                            placeholder="Nombre" required>
+                        <input type="text" class="form-control padding textAlign border-dark" id="tipo"
+                            placeholder="Pelicula o Serie" required>
+                        <input type="text" class="form-control padding textAlign border-dark" id="genero"
+                            placeholder="Genero" required>
+                        <input type="text" class="form-control textAlign border-dark" id="anio" placeholder="Año"
+                            required>
 
-    <div class=" flex card  navbar navbar-light bg-danger col-sm-12" style="width: 18rem;">
-        <div class="card-body">
-            <form class="row g-3">
-                <div class="col-md-12">
-                    <label for="validationDefault01" class="form-label">Datos Personales</label>
-                    <input type="text" class="form-control padding" id="validationDefault01"
-                        placeholder="Nombre y Apellido" required>
-                    <input type="text" class="form-control padding" id="validationDefault02" placeholder="Dni" required>
-                    <input type="text" class="form-control" id="validationDefault03" placeholder="Telefono" required>
-                </div>
-                <div class="col-12">
-                </div>
-                <div class="col-12">
-                    <button class="btn btn-primary" type="submit" id="enviar">Enviar</button>
-                </div>
-            </form>
+                    </div>
+                    <div class="col-12">
+                    </div>
+                    <div class="col-12 textAlign">
+                        <button class="btn btn-primary " type="submit" id="guardar">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row infoMain d-flex bd-highlight">
+
+        <div class="row infoMain d-flex bd-highlight" id="tabla">
         </div>
     </div>
 
-    <!-- <h1>Primer entrega proyecto Final</h1> -->
-    <!-- <div class="inicial">
-        <p>Trabajo de Julian Gareca Kandrachoff</p>
-    </div> -->
-    <!-- esto ahora esta incluido desde el Js. -->
-    <script src="./claseUno.js"></script>
+    <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
