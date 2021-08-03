@@ -149,18 +149,6 @@ let peliculasOrdenadasAnio = peliculas.sort(function (a, b) {
 
 });
 
-function consejos() {
-    if (imprimir()) {
-        let consejo = document.createElement("div")
-        consejo.setAttribute("class", "interesar")
-        consejo.setAttribute("id", "fav")
-        consejo.textContent = `Mis peliculas Favoritas`
-
-
-
-    }
-
-}
 
 function imprimir() {
 
